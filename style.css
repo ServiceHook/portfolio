@@ -1,0 +1,47 @@
+:root{
+--bg:#0b1020; --card:#0f1724; --accent:#7ce7c8; --muted:#9aa4b2; --glass:rgba(255,255,255,0.03);
+--radius:14px; --ff:Inter,system-ui,Segoe UI,Roboto,Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--ff);background:var(--bg);color:#e6eef6}
+canvas#bgCanvas{position:fixed;inset:0;z-index:-1}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 28px}
+.logo{font-weight:700}
+nav a{color:var(--muted);margin-right:14px;text-decoration:none}
+.btn{background:linear-gradient(90deg,var(--accent),#6fe0d0);border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.btn.hollow{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+main{padding:40px 28px 80px}
+.panel{padding:60px 0}
+.hero{min-height:60vh;display:flex;align-items:center}
+.hero-inner{max-width:900px}
+h1{font-size:48px;margin:0 0 12px}
+.sub{color:var(--muted);margin-bottom:18px}
+.container{max-width:1100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;backdrop-filter:blur(6px)}
+.card-link{display:inline-block;margin-top:10px}
+.contact-card{max-width:720px}
+.field{margin-bottom:12px}
+.field input,.field textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.actions{display:flex;gap:12px;align-items:center}
+.muted{color:var(--muted)}
+.footer{text-align:center;padding:40px 0}
+.reveal{opacity:0;transform:translateY(18px);transition:all 700ms cubic-bezier(.2,.9,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-up{opacity:0;transform:translateY(28px);transition:all 700ms ease}
+.reveal-up.visible{opacity:1;transform:none}
+/* admin styles */
+.admin-body{padding:20px}
+.admin-main{padding:28px}
+.contacts-list{display:flex;flex-direction:column;gap:12px}
+.contact-row{background:var(--card);padding:12px;border-radius:10px}
+.small{font-size:13px}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+.modal.hidden{display:none}
+.modal-card{background:var(--card);padding:18px;border-radius:12px;min-width:320px}
+.modal-close{position:absolute;right:12px;top:12px;border:none;background:transparent;color:var(--muted)}
+
+
+/* small screens */
+@media (max-width:700px){h1{font-size:28px}.topbar{padding:10px}}
