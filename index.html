@@ -1,56 +1,108 @@
 <!doctype html>
-</article>
-</div>
-</div>
-</section>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FutrPortfolio — Your Name</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
 
+  <header class="topbar">
+    <div class="logo">FutrPortfolio</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="signinBtn" class="btn hollow">Sign in</button>
+    </nav>
+  </header>
 
-<section id="contact" class="panel contact">
-<div class="container">
-<h2 class="reveal-up">Contact</h2>
-<form id="contactForm" class="card contact-card reveal">
-<div class="field">
-<label for="name">Name</label>
-<input id="name" name="name" required />
-</div>
-<div class="field">
-<label for="email">Email</label>
-<input id="email" name="email" type="email" required />
-</div>
-<div class="field">
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="5" required></textarea>
-</div>
-<div class="actions">
-<button class="btn" type="submit">Send Message</button>
-<div id="formStatus" class="muted"></div>
-</div>
-</form>
-</div>
-</section>
+  <main>
+    <section id="hero" class="panel hero">
+      <div class="hero-inner">
+        <h1 class="reveal">Hey — I'm <span class="accent">Your Name</span></h1>
+        <p class="sub reveal">I build delightful web interfaces, animations & tools.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn ghost" href="admin.html" target="_blank">Admin</a>
+        </div>
+      </div>
+    </section>
 
+    <section id="about" class="panel about">
+      <div class="container reveal-up">
+        <h2>About</h2>
+        <p>I am a developer focused on clean interfaces, fast performance and creative animations. This portfolio demonstrates an animated UX, a contact form saved into Firebase, and an admin panel to view contact submissions.</p>
+      </div>
+    </section>
 
-<footer class="footer">
-<small>© <span id="year"></span> Your Name — Built with ❤️</small>
-</footer>
-</main>
+    <section id="projects" class="panel projects">
+      <div class="container">
+        <h2 class="reveal-up">Projects</h2>
+        <div class="grid">
+          <article class="card reveal">
+            <h3>Animated Link Shortener</h3>
+            <p>Custom shortener with analytics and QR generation.</p>
+            <a class="card-link" href="#">View</a>
+          </article>
+          <article class="card reveal">
+            <h3>Streamer Tipping</h3>
+            <p>Firebase + Payment integration demo.</p>
+            <a class="card-link" href="#">View</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section id="contact" class="panel contact">
+      <div class="container">
+        <h2 class="reveal-up">Contact</h2>
+        <form id="contactForm" class="card contact-card reveal">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit">Send Message</button>
+            <div id="formStatus" class="muted"></div>
+          </div>
+        </form>
+      </div>
+    </section>
 
-<div id="authModal" class="modal hidden">
-<div class="modal-card">
-<button id="closeAuth" class="modal-close">✕</button>
-<h3>Sign in</h3>
-<input id="authEmail" placeholder="Email" />
-<input id="authPass" type="password" placeholder="Password" />
-<div class="modal-actions">
-<button id="emailSignIn" class="btn">Sign in</button>
-<button id="googleSignIn" class="btn ghost">Sign in with Google</button>
-</div>
-<p class="muted small">Tip: Use the same admin email in admin.js to access the admin panel.</p>
-</div>
-</div>
+    <footer class="footer">
+      <small>© <span id="year"></span> Your Name — Built with ❤️</small>
+    </footer>
+  </main>
 
+  <div id="authModal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeAuth" class="modal-close">✕</button>
+      <h3>Sign in</h3>
+      <input id="authEmail" placeholder="Email" />
+      <input id="authPass" type="password" placeholder="Password" />
+      <div class="modal-actions">
+        <button id="emailSignIn" class="btn">Sign in</button>
+        <button id="googleSignIn" class="btn ghost">Sign in with Google</button>
+      </div>
+      <p class="muted small">Tip: Use the same admin email in admin.js to access the admin panel.</p>
+    </div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
