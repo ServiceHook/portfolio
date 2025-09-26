@@ -1,31 +1,30 @@
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>FutrPortfolio — Admin</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FutrPortfolio — Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
 <body class="admin-body">
-<header class="topbar">
-<div class="logo">Admin</div>
-<nav>
-<span id="adminEmailView" class="muted"></span>
-<button id="adminSignOut" class="btn hollow">Sign out</button>
-</nav>
-</header>
+  <header class="topbar">
+    <div class="logo">Admin</div>
+    <nav>
+      <span id="adminEmailView" class="muted"></span>
+      <button id="adminSignOut" class="btn hollow">Sign out</button>
+    </nav>
+  </header>
 
+  <main class="admin-main">
+    <section class="panel">
+      <h2>Contact Submissions</h2>
+      <div id="contactsList" class="contacts-list"></div>
+    </section>
+  </main>
 
-<main class="admin-main">
-<section class="panel">
-<h2>Contact Submissions</h2>
-<div id="contactsList" class="contacts-list"></div>
-</section>
-</main>
-
-
-<script src="admin.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>
