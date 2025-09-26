@@ -1,30 +1,31 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>FutrPortfolio — Admin</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">ADMIN PANEL</div>
-            <button id="logout-btn" class="btn">Logout</button>
-        </nav>
-    </header>
+<body class="admin-body">
+<header class="topbar">
+<div class="logo">Admin</div>
+<nav>
+<span id="adminEmailView" class="muted"></span>
+<button id="adminSignOut" class="btn hollow">Sign out</button>
+</nav>
+</header>
 
-    <main class="container">
-        <h2>Contact Messages</h2>
-        <div id="messages-container">
-            </div>
-    </main>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    
-    <script src="js/firebase-config.js"></script>
-    <script src="js/admin.js"></script>
+<main class="admin-main">
+<section class="panel">
+<h2>Contact Submissions</h2>
+<div id="contactsList" class="contacts-list"></div>
+</section>
+</main>
+
+
+<script src="admin.js"></script>
 </body>
 </html>
