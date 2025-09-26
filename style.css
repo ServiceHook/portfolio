@@ -1,6 +1,6 @@
 :root{
---bg:#0b1020; --card:#0f1724; --accent:#7ce7c8; --muted:#9aa4b2; --glass:rgba(255,255,255,0.03);
---radius:14px; --ff:Inter,system-ui,Segoe UI,Roboto,Arial;
+  --bg:#0b1020; --card:#0f1724; --accent:#7ce7c8; --muted:#9aa4b2; --glass:rgba(255,255,255,0.03);
+  --radius:14px; --ff:Inter,system-ui,Segoe UI,Roboto,Arial;
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:var(--ff);background:var(--bg);color:#e6eef6}
@@ -41,7 +41,5 @@ h1{font-size:48px;margin:0 0 12px}
 .modal.hidden{display:none}
 .modal-card{background:var(--card);padding:18px;border-radius:12px;min-width:320px}
 .modal-close{position:absolute;right:12px;top:12px;border:none;background:transparent;color:var(--muted)}
-
-
 /* small screens */
 @media (max-width:700px){h1{font-size:28px}.topbar{padding:10px}}
