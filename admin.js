@@ -12,7 +12,7 @@ if(!user){
 const provider = new firebase.auth.GoogleAuthProvider();
 try{await authAdmin.signInWithPopup(provider)}catch(e){console.error('Admin sign-in failed',e)}
 }
-if(user && user.email!==ADMIN_EMAIL){
+if(user && user.email!==ztenkammu@gmail.com){
 alert('This admin panel is restricted. Signed out.');
 await authAdmin.signOut();
 location.href = 'index.html';
